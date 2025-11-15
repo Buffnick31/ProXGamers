@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProXGamers' Gaming Tournaments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Gaming Tournaments</h1>
+        <p>Your hub for exciting esports events and competitions!</p>
+    </header>
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>We organize thrilling gaming tournaments for popular games like Fortnite, League of Legends, and Valorant. Join us for a chance to compete, win prizes, and connect with fellow gamers.</p>
+        </section>
+        <section>
+            <h2>Register for a Tournament</h2>
+            <p>Fill out the form below to sign up. We'll get back to you with details.</p>
+            <form action="#" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="game">Preferred Game:</label>
+                <select id="game" name="game" required>
+                    <option value="">Select a game</option>
+                    <option value="fortnite">Fortnite</option>
+                    <option value="lol">League of Legends</option>
+                    <option value="valorant">Valorant</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="team">Team Name (if applicable):</label>
+                <input type="text" id="team" name="team">
+
+                <label for="message">Additional Comments:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Submit Registration</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Gaming Tournaments. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Basic form submission handling (for demo purposes; in a real site, use server-side processing)
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for registering! We\'ll contact you soon.');
+        });
+    </script>
+</body>
+</html>
