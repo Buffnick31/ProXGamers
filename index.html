@@ -17,6 +17,36 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+               }
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #007bff;
+        }
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #fff;
+            text-align: right;
+            padding: 10px;
         }
         main {
             max-width: 800px;
@@ -62,6 +92,23 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+             /* Responsive styles for hamburger menu */
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: #444;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            .hamburger {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -70,6 +117,16 @@
         <h1>Welcome to Pro{X}Gamers Gaming Tournaments</h1>
         <p>Your hub for exciting esports events and competitions!</p>
     </header>
+      <nav>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+        <ul id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#players">Players</a></li>
+            <!-- Add more tabs here, e.g., <li><a href="#contact">Contact</a></li> or link to another file like <li><a href="contact.html">Contact</a></li> -->
+        </ul>
+    </nav>
     <main>
         <section>
             <h2>About Us</h2>
@@ -108,10 +165,47 @@
                 <button type="submit">Submit Registration</button>
             </form>
         </section>
+         <section id="players">
+            <h2>Registered Players</h2>
+            <p>Check out the list of players who have signed up for our upcoming tournaments.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Game</th>
+                        <th>Team</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>johndoe@example.com</td>
+                        <td>Fortnite</td>
+                        <td>Solo</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>janesmith@example.com</td>
+                        <td>League of Legends</td>
+                        <td>Team Awesome</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </section>
+        <!-- Add more sections here if needed, e.g., <section id="contact"><h2>Contact</h2><p>Email us at info@gamingtournaments.com</p></section> -->
     </main>
     <footer>
         <p>&copy; 2025 Gaming Tournaments. All rights reserved.</p>
     </footer>
+
+      <script>
+        // Toggle hamburger menu
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
 
     <script>
         // Basic form submission handling (for demo purposes; in a real site, use server-side processing)
